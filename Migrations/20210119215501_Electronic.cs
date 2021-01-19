@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.IO;
 
 namespace Electronic_MVC.Migrations
 {
@@ -126,6 +127,11 @@ namespace Electronic_MVC.Migrations
                 name: "IX_Product_Detail_Category_DetailId",
                 table: "Product_Detail",
                 column: "Category_DetailId");
+
+
+            var sqlFile = Path.Combine(".\\DatabaseScript", @"Data.sql");
+
+            migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
