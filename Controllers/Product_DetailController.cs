@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Electronic_MVC.Data;
 using Electronic_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Electronic_MVC.Controllers
 {
@@ -45,7 +47,7 @@ namespace Electronic_MVC.Controllers
 
             return View(product_Detail);
         }
-
+        [Authorize]
         // GET: Product_Detail/Create
         public IActionResult Create()
         {
@@ -71,7 +73,7 @@ namespace Electronic_MVC.Controllers
             ViewData["Category_DetailId"] = new SelectList(_context.Category_Detail, "Id", "Product", product_Detail.Category_DetailId);
             return View(product_Detail);
         }
-
+        [Authorize]
         // GET: Product_Detail/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -126,7 +128,7 @@ namespace Electronic_MVC.Controllers
             ViewData["Category_DetailId"] = new SelectList(_context.Category_Detail, "Id", "Product", product_Detail.Category_DetailId);
             return View(product_Detail);
         }
-
+        [Authorize]
         // GET: Product_Detail/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

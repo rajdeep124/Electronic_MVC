@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Electronic_MVC.Data;
 using Electronic_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Electronic_MVC.Controllers
 {
+    [Authorize]
     public class Order_DetailController : Controller
     {
         private readonly Electronic_MVCContext _context;
@@ -71,7 +74,7 @@ namespace Electronic_MVC.Controllers
             ViewData["Product_DetailId"] = new SelectList(_context.Product_Detail, "Id", "Product_Name", order_Detail.Product_DetailId);
             return View(order_Detail);
         }
-
+        [Authorize]
         // GET: Order_Detail/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

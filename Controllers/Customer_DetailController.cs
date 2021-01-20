@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Electronic_MVC.Data;
 using Electronic_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Electronic_MVC.Controllers
 {
+    [Authorize]
     public class Customer_DetailController : Controller
     {
         private readonly Electronic_MVCContext _context;

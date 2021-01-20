@@ -6,19 +6,19 @@
 
 <h1>Create</h1>
 
-<h4>Category_Detail</h4>
+<h4>Category Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Product" class="control-label"></label>
+                <label asp-for="Product" class="control-label">Product</label>
                 <input asp-for="Product" class="form-control" />
                 <span asp-validation-for="Product" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category_Type" class="control-label"></label>
+                <label asp-for="Category_Type" class="control-label">Category Type</label>
                 <input asp-for="Category_Type" class="form-control" />
                 <span asp-validation-for="Category_Type" class="text-danger"></span>
             </div>
