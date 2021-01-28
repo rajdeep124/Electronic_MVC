@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-
+<!--code to show the create page of the table-->
 <h1>Create</h1>
 
 <h4>Order Detail</h4>
@@ -24,11 +24,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Customer_DetailId" class="control-label">Customer Detail</label>
-                <select asp-for="Customer_DetailId" class ="form-control" asp-items="ViewBag.Customer_DetailId"></select>
+                <select asp-for="Customer_DetailId" class="form-control" asp-items="ViewBag.Customer_DetailId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Product_DetailId" class="control-label">Product Detail</label>
-                <select asp-for="Product_DetailId" class ="form-control" asp-items="ViewBag.Product_DetailId"></select>
+                <select asp-for="Product_DetailId" class="form-control" asp-items="ViewBag.Product_DetailId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
